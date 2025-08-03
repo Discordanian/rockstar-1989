@@ -1,0 +1,3 @@
+time resources/jsformat.sh
+time browserify -d -o app.js app/stonesun.js
+time uglify -s app.js -o app.min.js

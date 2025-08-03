@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Stone Sun Game">
+    <meta name="author" content="Kurt Schwind">
+    <title>Stone Sun</title>
+
+    <!-- Stylesheets to handle CSS -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <!-- Optional theme -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css"> -->
+
+    <link href="resources/css/app.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="navbar navbar-default" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+                </button> <a id="title" class="navbar-brand" href="#">StoneSun</a>
+                <!-- navbar header -->
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li id="how_to_play" class="active"><a href="#">How to play</a></li>
+                    <li><a id="about" href="#">About</a></li>
+                    <li><a id="new_game" href="#">New Game</a></li>
+                    <li><a id="tours" href="#">Tours</a></li>
+                    <li><a id="charts" href="#">Charts</a></li>
+                    <li><a id="releases" href="#">Releases</a></li>
+                    <li><a id="drugs" href="#">Drugs</a></li>
+                </ul>
+                <!-- collapse navbar -->
+            </div>
+            <!-- container -->
+        </div>
+        <!-- navbar default-->
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div id="name" class="col-md-12">
+                <h2 id="bandname" class="text-center text-primary" >Splurvy and the Splurve Tones</h2>
+                <!-- name -->
+            </div>
+            <!-- row for name -->
+        </div>
+        <div class="row">
+            <div id="personal" class="col-md-3">
+                <table class="table table-bordered table-striped table-condensed">
+                    <tbody>
+                        <tr class="success">
+                            <td>Health</td>
+                            <td>
+                                <div id="player_health">50</div>
+                            </td>
+                        </tr>
+                        <tr class="warning">
+                            <td>Creativity</td>
+                            <td>
+                                <div id="player_creativity">50</div>
+                            </td>
+                        </tr>
+                        <tr class="info">
+                            <td>Happiness</td>
+                            <td>
+                                <div id="player_happiness">50</div>
+                            </td>
+                        </tr>
+                        <tr class="danger">
+                            <td>Alertness</td>
+                            <td>
+                                <div id="player_alterness">50</div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- div personal -->
+            </div>
+            <div id="timeline" class="col-md-3">
+                <table class="table table-bordered table-striped table-condensed">
+                    <tbody>
+                        <tr class="danger">
+                            <td>Year</td>
+                            <td>
+                                <div id="time_year">1</div>
+                            </td>
+                        </tr>
+                        <tr class="success">
+                            <td>Week</td>
+                            <td>
+                                <div id="time_week">1</div>
+                            </td>
+                        </tr>
+                        <tr class="info">
+                            <td>Day</td>
+                            <td>
+                                <div id="time_dow">Monday</div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- div timeline -->
+            </div>
+            <div id="feedback" class="col-md-3">
+                <table class="table table-bordered table-striped table-condensed">
+                    <tbody>
+                        <tr class="warning">
+                            <td>Local Popularity</td>
+                            <td>
+                                <div id="local_popularity">0</div>
+                            </td>
+                        </tr>
+                        <tr class="info">
+                            <td>National Popularity</td>
+                            <td>
+                                <div id="national_popularity">0</div>
+                            </td>
+                        </tr>
+                        <tr class="danger">
+                            <td>Global Popularity</td>
+                            <td>
+                                <div id="global_popularity">0</div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- div feedback -->
+            </div>
+            <div id="score" class="col-md-3">
+                <table class="table table-bordered table-striped">
+                    <tbody>
+                        <tr class="active">
+                            <td>Score</td>
+                            <td>
+                                <div id="score">0</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Money</td>
+                            <td>
+                                <div id="money">0</div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- div feedback -->
+            </div>
+
+            <!-- row with stats -->
+        </div>
+        <div class="row">
+            <div id="whatgoingon" class="col-md-6">
+                <h4 class="text-center">What's goin' on . . .</h4>
+            </div>
+            <div id="grapevine" class="col-md-6">
+                <h4 class="text-center">Grapevine</h4>
+            </div>
+        <!-- div close row col headers -->
+        </div>
+        <div class="row">
+            <div id="sslocal" class="col-md-6">
+                    <div id="popup1"></div>
+                <p class="text-warning">You adore the marijuanna and want some more.
+                </p>
+                <p class="text-info">Dodgy Sam says he has been offered a support slot for you with Serious Artists on their 6 weeek tour of large halls in the local area starting in 2 weeks time.
+                </p>
+                <p class="text-info">He advises you not to do it, as you will get no money, and you desperately need some.
+                </p>
+                <p class="text-primary">Your guitarist says you are "unbelievably disgusting"!
+                </p>
+                <p class="text-warning">L.S.D. can alter your perception . . .
+                </p>
+                <!-- sslocal -->
+            </div>
+            <div id="ssglobal" class="col-md-6" border="1px">
+                    <div id="popup2"></div>
+                <p class="text-info">New Local Times popularity poll published today.
+                </p>
+                <p class="text-success">New single released by 'The 3 Wenches' called 'Another Nightmare'!
+                </p>
+                <p class="text-danger">New single released by 'Peedey Larynx' called 'Hey Man'!
+                </p>
+                <p class="text-muted">New single released by 'The cockroaches' called 'Hole in the middle'
+                </p>
+                <p class="text-primary">New National Review poll published today.
+                </p>
+                <!-- ssglobal -->
+            </div>
+            <!-- row with local/global -->
+        </div>
+        <!-- container fluid -->
+    </div>
+    <!-- Javascript for the applications -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="app/bootbox.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
