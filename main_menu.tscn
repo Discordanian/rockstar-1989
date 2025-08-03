@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://0hx6ongetkf7"]
+[gd_scene load_steps=9 format=3 uid="uid://0hx6ongetkf7"]
 
 [ext_resource type="Texture2D" uid="uid://qk78uefpq613" path="res://Assets/images/RockStar.png" id="1_06t4h"]
+[ext_resource type="Script" uid="uid://dkmwnrgylgdoc" path="res://main_menu.gd" id="1_7vrkn"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7vrkn"]
 texture = ExtResource("1_06t4h")
@@ -35,6 +36,8 @@ corner_radius_bottom_left = 8
 shadow_size = 5
 shadow_offset = Vector2(0, 4)
 
+[sub_resource type="SystemFont" id="SystemFont_fu7sn"]
+
 [node name="MainMenu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -42,6 +45,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_7vrkn")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
@@ -125,5 +129,10 @@ theme_override_colors/font_color = Color(0.73245, 0.866616, 0, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_offset_y = 6
+theme_override_fonts/font = SubResource("SystemFont_fu7sn")
 theme_override_font_sizes/font_size = 109
 text = "Rockstar 1989"
+
+[connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/OptionsButton" to="." method="_options_pressed"]
+[connection signal="pressed" from="VBoxContainer/ExitButton" to="." method="_exit_pressed"]

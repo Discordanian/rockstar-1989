@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Rock Star 1978"
-run/main_scene="uid://0hx6ongetkf7"
+run/main_scene="uid://dl13ysjxfy5rm"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 
