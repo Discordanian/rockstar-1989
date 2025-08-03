@@ -37,6 +37,7 @@ shadow_size = 5
 shadow_offset = Vector2(0, 4)
 
 [sub_resource type="SystemFont" id="SystemFont_fu7sn"]
+subpixel_positioning = 0
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3

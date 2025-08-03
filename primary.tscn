@@ -1,4 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://b4efg1hs2tlah"]
+[gd_scene load_steps=7 format=3 uid="uid://b4efg1hs2tlah"]
+
+[ext_resource type="Script" uid="uid://bw6xqmkrlpxb5" path="res://primary.gd" id="1_r38qh"]
 
 [sub_resource type="Theme" id="Theme_r38qh"]
 
@@ -19,6 +21,7 @@ border_width_bottom = 2
 bg_color = Color(0.802689, 0.396348, 0.928267, 1)
 
 [node name="Primary" type="Node2D"]
+script = ExtResource("1_r38qh")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 offset_left = 55.0
@@ -87,45 +90,38 @@ offset_bottom = 40.0
 
 [node name="Help" type="Button" parent="VBoxContainer/Lower Menu/HBoxContainer"]
 layout_mode = 2
-size_flags_horizontal = 3
 text = "Help"
 
 [node name="Charts" type="Button" parent="VBoxContainer/Lower Menu/HBoxContainer"]
 layout_mode = 2
-size_flags_horizontal = 3
 text = "Charts"
 
 [node name="Releases" type="Button" parent="VBoxContainer/Lower Menu/HBoxContainer"]
 layout_mode = 2
-size_flags_horizontal = 3
 text = "Releases"
 
 [node name="Tours" type="Button" parent="VBoxContainer/Lower Menu/HBoxContainer"]
 layout_mode = 2
-size_flags_horizontal = 3
 text = "Tours"
 
 [node name="Poll" type="Button" parent="VBoxContainer/Lower Menu/HBoxContainer"]
 layout_mode = 2
-size_flags_horizontal = 3
 text = "Poll"
 
 [node name="Info" type="Button" parent="VBoxContainer/Lower Menu/HBoxContainer"]
 layout_mode = 2
-size_flags_horizontal = 3
 text = "Info"
 
 [node name="Drugs" type="Button" parent="VBoxContainer/Lower Menu/HBoxContainer"]
 layout_mode = 2
-size_flags_horizontal = 3
 text = "Drugs"
 
 [node name="Money" type="Button" parent="VBoxContainer/Lower Menu/HBoxContainer"]
 layout_mode = 2
-size_flags_horizontal = 3
 text = "Money"
 
 [node name="Quit" type="Button" parent="VBoxContainer/Lower Menu/HBoxContainer"]
 layout_mode = 2
-size_flags_horizontal = 3
 text = "Quit"
+
+[connection signal="pressed" from="VBoxContainer/Lower Menu/HBoxContainer/Quit" to="." method="_quit_pressed"]
