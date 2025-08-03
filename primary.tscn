@@ -1,17 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://b4efg1hs2tlah"]
 
-[sub_resource type="Theme" id="Theme_gmq3y"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r38qh"]
-content_margin_left = 2.0
-content_margin_top = 2.0
-content_margin_right = 2.0
-content_margin_bottom = 2.0
-bg_color = Color(0.289269, 0.639647, 0.840396, 1)
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 2
+[sub_resource type="Theme" id="Theme_r38qh"]
 
 [sub_resource type="SystemFont" id="SystemFont_agmv6"]
 
@@ -20,70 +9,71 @@ default_font = SubResource("SystemFont_agmv6")
 default_font_size = 20
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4g200"]
-bg_color = Color(0.910463, 0.347017, 0.761372, 1)
+bg_color = Color(0.909804, 0.345098, 0.129412, 1)
 border_width_left = 2
 border_width_top = 2
 border_width_right = 2
 border_width_bottom = 2
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gmq3y"]
+bg_color = Color(0.802689, 0.396348, 0.928267, 1)
+
 [node name="Primary" type="Node2D"]
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+offset_left = 55.0
+offset_top = 60.0
+offset_right = 1096.0
+offset_bottom = 590.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 
 [node name="Top Bar" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
+size_flags_vertical = 0
+theme = SubResource("Theme_r38qh")
+theme_override_constants/separation = 3
+
+[node name="Score" type="Label" parent="VBoxContainer/Top Bar"]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "Score: 100"
+
+[node name="Day" type="Label" parent="VBoxContainer/Top Bar"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+text = "Year 1 Week 3 Tuesday"
 
 [node name="Control" type="Control" parent="VBoxContainer/Top Bar"]
 layout_mode = 2
-
-[node name="Score" type="Label" parent="VBoxContainer/Top Bar/Control"]
-layout_mode = 1
-anchors_preset = 4
-anchor_top = 0.5
-anchor_bottom = 0.5
-offset_top = -11.5
-offset_right = 79.0
-offset_bottom = 11.5
-grow_vertical = 2
-text = "Score: 100"
-
-[node name="Day" type="Label" parent="VBoxContainer/Top Bar/Control"]
-layout_mode = 1
-anchors_preset = 6
-anchor_left = 1.0
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.5
-offset_left = 313.0
-offset_top = -17.0
-offset_right = 490.0
-offset_bottom = 6.0
-grow_horizontal = 0
-grow_vertical = 2
-text = "Year 1 Week 3 Tuesday"
+size_flags_vertical = 0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_constants/separation = 4
 
-[node name="PanelContainer" type="PanelContainer" parent="VBoxContainer/HBoxContainer"]
+[node name="whats_going_on" type="PanelContainer" parent="VBoxContainer/HBoxContainer"]
 layout_mode = 2
-theme = SubResource("Theme_gmq3y")
-theme_override_styles/panel = SubResource("StyleBoxFlat_r38qh")
-
-[node name="whats_going_on" type="PanelContainer" parent="VBoxContainer/HBoxContainer/PanelContainer"]
-layout_mode = 2
+size_flags_horizontal = 3
 theme = SubResource("Theme_mfphk")
 theme_override_styles/panel = SubResource("StyleBoxFlat_4g200")
 
-[node name="Grapevine" type="PanelContainer" parent="VBoxContainer/HBoxContainer/PanelContainer"]
+[node name="test1" type="Label" parent="VBoxContainer/HBoxContainer/whats_going_on"]
 layout_mode = 2
+text = "What's Going On
+"
+
+[node name="Grapevine" type="PanelContainer" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_gmq3y")
+
+[node name="test2" type="Label" parent="VBoxContainer/HBoxContainer/Grapevine"]
+layout_mode = 2
+text = "Grapevine
+"
 
 [node name="Lower Menu" type="MenuBar" parent="VBoxContainer"]
 layout_mode = 2
@@ -97,36 +87,45 @@ offset_bottom = 40.0
 
 [node name="Help" type="Button" parent="VBoxContainer/Lower Menu/HBoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 3
 text = "Help"
 
 [node name="Charts" type="Button" parent="VBoxContainer/Lower Menu/HBoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 3
 text = "Charts"
 
 [node name="Releases" type="Button" parent="VBoxContainer/Lower Menu/HBoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 3
 text = "Releases"
 
 [node name="Tours" type="Button" parent="VBoxContainer/Lower Menu/HBoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 3
 text = "Tours"
 
 [node name="Poll" type="Button" parent="VBoxContainer/Lower Menu/HBoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 3
 text = "Poll"
 
 [node name="Info" type="Button" parent="VBoxContainer/Lower Menu/HBoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 3
 text = "Info"
 
 [node name="Drugs" type="Button" parent="VBoxContainer/Lower Menu/HBoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 3
 text = "Drugs"
 
 [node name="Money" type="Button" parent="VBoxContainer/Lower Menu/HBoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 3
 text = "Money"
 
 [node name="Quit" type="Button" parent="VBoxContainer/Lower Menu/HBoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 3
 text = "Quit"
