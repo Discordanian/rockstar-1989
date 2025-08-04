@@ -1,127 +1,166 @@
-[gd_scene load_steps=7 format=3 uid="uid://b4efg1hs2tlah"]
+[gd_scene load_steps=11 format=3 uid="uid://b4efg1hs2tlah"]
 
-[ext_resource type="Script" uid="uid://bw6xqmkrlpxb5" path="res://primary.gd" id="1_r38qh"]
+[sub_resource type="Theme" id="Theme_gmq3y"]
+
+[sub_resource type="SystemFont" id="SystemFont_gmq3y"]
 
 [sub_resource type="Theme" id="Theme_r38qh"]
+default_font = SubResource("SystemFont_gmq3y")
+default_font_size = 24
 
 [sub_resource type="SystemFont" id="SystemFont_agmv6"]
 
 [sub_resource type="Theme" id="Theme_mfphk"]
 default_font = SubResource("SystemFont_agmv6")
-default_font_size = 20
+default_font_size = 16
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4g200"]
-bg_color = Color(0.909804, 0.345098, 0.129412, 1)
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 2
+[sub_resource type="SystemFont" id="SystemFont_4g200"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gmq3y"]
-bg_color = Color(0.802689, 0.396348, 0.928267, 1)
+[sub_resource type="SystemFont" id="SystemFont_y78v3"]
 
-[node name="Primary" type="Node2D"]
-script = ExtResource("1_r38qh")
+[sub_resource type="SystemFont" id="SystemFont_7x6b3"]
+
+[sub_resource type="SystemFont" id="SystemFont_uvohh"]
+
+[sub_resource type="SystemFont" id="SystemFont_f0jmt"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_gmq3y")
+color = Color(0.288366, 0.0572797, 0.0590635, 1)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
-offset_left = 55.0
-offset_top = 60.0
-offset_right = 1096.0
-offset_bottom = 590.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="Top Bar" type="HBoxContainer" parent="VBoxContainer"]
+[node name="GridContainer" type="GridContainer" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
-size_flags_vertical = 0
 theme = SubResource("Theme_r38qh")
-theme_override_constants/separation = 3
+columns = 5
 
-[node name="Score" type="Label" parent="VBoxContainer/Top Bar"]
+[node name="Popularity" type="RichTextLabel" parent="VBoxContainer/GridContainer"]
 layout_mode = 2
-size_flags_horizontal = 2
-text = "Score: 100"
+size_flags_horizontal = 3
+size_flags_vertical = 3
+focus_mode = 2
+theme = SubResource("Theme_mfphk")
+theme_override_fonts/normal_font = SubResource("SystemFont_4g200")
+theme_override_fonts/mono_font = SubResource("SystemFont_y78v3")
+theme_override_fonts/italics_font = SubResource("SystemFont_7x6b3")
+theme_override_fonts/bold_italics_font = SubResource("SystemFont_uvohh")
+theme_override_fonts/bold_font = SubResource("SystemFont_f0jmt")
+text = "Popularity
+Local:
+National:
+Global:"
+selection_enabled = true
 
-[node name="Day" type="Label" parent="VBoxContainer/Top Bar"]
+[node name="Date" type="RichTextLabel" parent="VBoxContainer/GridContainer"]
 layout_mode = 2
-size_flags_horizontal = 8
-size_flags_vertical = 0
-text = "Year 1 Week 3 Tuesday"
+size_flags_horizontal = 3
+size_flags_vertical = 3
+focus_mode = 2
+theme = SubResource("Theme_mfphk")
+theme_override_fonts/normal_font = SubResource("SystemFont_4g200")
+theme_override_fonts/mono_font = SubResource("SystemFont_y78v3")
+theme_override_fonts/italics_font = SubResource("SystemFont_7x6b3")
+theme_override_fonts/bold_italics_font = SubResource("SystemFont_uvohh")
+theme_override_fonts/bold_font = SubResource("SystemFont_f0jmt")
+text = "Date
+Week 1 Year 1 Day 23 Tuesday"
+selection_enabled = true
 
-[node name="Control" type="Control" parent="VBoxContainer/Top Bar"]
+[node name="Health" type="RichTextLabel" parent="VBoxContainer/GridContainer"]
 layout_mode = 2
-size_flags_vertical = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+focus_mode = 2
+theme = SubResource("Theme_mfphk")
+theme_override_fonts/normal_font = SubResource("SystemFont_4g200")
+theme_override_fonts/mono_font = SubResource("SystemFont_y78v3")
+theme_override_fonts/italics_font = SubResource("SystemFont_7x6b3")
+theme_override_fonts/bold_italics_font = SubResource("SystemFont_uvohh")
+theme_override_fonts/bold_font = SubResource("SystemFont_f0jmt")
+text = "Health
+Creativity
+Happiness
+Alertness"
+selection_enabled = true
 
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+[node name="Cash" type="RichTextLabel" parent="VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+focus_mode = 2
+theme = SubResource("Theme_mfphk")
+theme_override_fonts/normal_font = SubResource("SystemFont_4g200")
+theme_override_fonts/mono_font = SubResource("SystemFont_y78v3")
+theme_override_fonts/italics_font = SubResource("SystemFont_7x6b3")
+theme_override_fonts/bold_italics_font = SubResource("SystemFont_uvohh")
+theme_override_fonts/bold_font = SubResource("SystemFont_f0jmt")
+text = "Cash: 300"
+selection_enabled = true
+
+[node name="Addictions" type="RichTextLabel" parent="VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+focus_mode = 2
+theme = SubResource("Theme_mfphk")
+theme_override_fonts/normal_font = SubResource("SystemFont_4g200")
+theme_override_fonts/mono_font = SubResource("SystemFont_y78v3")
+theme_override_fonts/italics_font = SubResource("SystemFont_7x6b3")
+theme_override_fonts/bold_italics_font = SubResource("SystemFont_uvohh")
+theme_override_fonts/bold_font = SubResource("SystemFont_f0jmt")
+text = "LSD
+Mary J
+H"
+selection_enabled = true
+
+[node name="Mid Labels" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="What\'s Going On" type="Label" parent="VBoxContainer/Mid Labels"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "What's Going On"
+
+[node name="Grapevine" type="Label" parent="VBoxContainer/Mid Labels"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Grapevine"
+
+[node name="Mid Display" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_constants/separation = 4
 
-[node name="whats_going_on" type="PanelContainer" parent="VBoxContainer/HBoxContainer"]
+[node name="WhatsGoingOn" type="RichTextLabel" parent="VBoxContainer/Mid Display"]
 layout_mode = 2
-size_flags_horizontal = 3
-theme = SubResource("Theme_mfphk")
-theme_override_styles/panel = SubResource("StyleBoxFlat_4g200")
+text = "What is Going on?  
 
-[node name="test1" type="Label" parent="VBoxContainer/HBoxContainer/whats_going_on"]
-layout_mode = 2
-text = "What's Going On
-"
+No really.
 
-[node name="Grapevine" type="PanelContainer" parent="VBoxContainer/HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_styles/panel = SubResource("StyleBoxFlat_gmq3y")
+What?"
 
-[node name="test2" type="Label" parent="VBoxContainer/HBoxContainer/Grapevine"]
+[node name="Grapevine" type="RichTextLabel" parent="VBoxContainer/Mid Display"]
 layout_mode = 2
 text = "Grapevine
 "
-
-[node name="Lower Menu" type="MenuBar" parent="VBoxContainer"]
-layout_mode = 2
-theme_override_constants/h_separation = 4
-theme_override_constants/outline_size = 4
-
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Lower Menu"]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="Help" type="Button" parent="VBoxContainer/Lower Menu/HBoxContainer"]
-layout_mode = 2
-text = "Help"
-
-[node name="Charts" type="Button" parent="VBoxContainer/Lower Menu/HBoxContainer"]
-layout_mode = 2
-text = "Charts"
-
-[node name="Releases" type="Button" parent="VBoxContainer/Lower Menu/HBoxContainer"]
-layout_mode = 2
-text = "Releases"
-
-[node name="Tours" type="Button" parent="VBoxContainer/Lower Menu/HBoxContainer"]
-layout_mode = 2
-text = "Tours"
-
-[node name="Poll" type="Button" parent="VBoxContainer/Lower Menu/HBoxContainer"]
-layout_mode = 2
-text = "Poll"
-
-[node name="Info" type="Button" parent="VBoxContainer/Lower Menu/HBoxContainer"]
-layout_mode = 2
-text = "Info"
-
-[node name="Drugs" type="Button" parent="VBoxContainer/Lower Menu/HBoxContainer"]
-layout_mode = 2
-text = "Drugs"
-
-[node name="Money" type="Button" parent="VBoxContainer/Lower Menu/HBoxContainer"]
-layout_mode = 2
-text = "Money"
-
-[node name="Quit" type="Button" parent="VBoxContainer/Lower Menu/HBoxContainer"]
-layout_mode = 2
-text = "Quit"
-
-[connection signal="pressed" from="VBoxContainer/Lower Menu/HBoxContainer/Quit" to="." method="_quit_pressed"]
