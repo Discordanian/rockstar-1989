@@ -1,30 +1,37 @@
-[gd_scene load_steps=11 format=3 uid="uid://b4efg1hs2tlah"]
+[gd_scene format=3 uid="uid://b4efg1hs2tlah"]
 
 [sub_resource type="Theme" id="Theme_gmq3y"]
 
 [sub_resource type="SystemFont" id="SystemFont_gmq3y"]
+subpixel_positioning = 0
 
 [sub_resource type="Theme" id="Theme_r38qh"]
 default_font = SubResource("SystemFont_gmq3y")
 default_font_size = 24
 
 [sub_resource type="SystemFont" id="SystemFont_agmv6"]
+subpixel_positioning = 0
 
 [sub_resource type="Theme" id="Theme_mfphk"]
 default_font = SubResource("SystemFont_agmv6")
 default_font_size = 16
 
 [sub_resource type="SystemFont" id="SystemFont_4g200"]
-
-[sub_resource type="SystemFont" id="SystemFont_y78v3"]
-
-[sub_resource type="SystemFont" id="SystemFont_7x6b3"]
-
-[sub_resource type="SystemFont" id="SystemFont_uvohh"]
+subpixel_positioning = 0
 
 [sub_resource type="SystemFont" id="SystemFont_f0jmt"]
+subpixel_positioning = 0
 
-[node name="Control" type="Control"]
+[sub_resource type="SystemFont" id="SystemFont_uvohh"]
+subpixel_positioning = 0
+
+[sub_resource type="SystemFont" id="SystemFont_7x6b3"]
+subpixel_positioning = 0
+
+[sub_resource type="SystemFont" id="SystemFont_y78v3"]
+subpixel_positioning = 0
+
+[node name="Control" type="Control" unique_id=423987607]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -32,7 +39,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1487365539]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -42,7 +49,7 @@ grow_vertical = 2
 theme = SubResource("Theme_gmq3y")
 color = Color(0.288366, 0.0572797, 0.0590635, 1)
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=2008878765]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -50,109 +57,109 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="GridContainer" type="GridContainer" parent="VBoxContainer"]
+[node name="GridContainer" type="GridContainer" parent="VBoxContainer" unique_id=1750762732]
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
 theme = SubResource("Theme_r38qh")
 columns = 5
 
-[node name="Popularity" type="RichTextLabel" parent="VBoxContainer/GridContainer"]
+[node name="Popularity" type="RichTextLabel" parent="VBoxContainer/GridContainer" unique_id=1325640379]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 focus_mode = 2
 theme = SubResource("Theme_mfphk")
 theme_override_fonts/normal_font = SubResource("SystemFont_4g200")
-theme_override_fonts/mono_font = SubResource("SystemFont_y78v3")
-theme_override_fonts/italics_font = SubResource("SystemFont_7x6b3")
-theme_override_fonts/bold_italics_font = SubResource("SystemFont_uvohh")
 theme_override_fonts/bold_font = SubResource("SystemFont_f0jmt")
+theme_override_fonts/bold_italics_font = SubResource("SystemFont_uvohh")
+theme_override_fonts/italics_font = SubResource("SystemFont_7x6b3")
+theme_override_fonts/mono_font = SubResource("SystemFont_y78v3")
 text = "Popularity
 Local:
 National:
 Global:"
 selection_enabled = true
 
-[node name="Date" type="RichTextLabel" parent="VBoxContainer/GridContainer"]
+[node name="Date" type="RichTextLabel" parent="VBoxContainer/GridContainer" unique_id=333990048]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 focus_mode = 2
 theme = SubResource("Theme_mfphk")
 theme_override_fonts/normal_font = SubResource("SystemFont_4g200")
-theme_override_fonts/mono_font = SubResource("SystemFont_y78v3")
-theme_override_fonts/italics_font = SubResource("SystemFont_7x6b3")
-theme_override_fonts/bold_italics_font = SubResource("SystemFont_uvohh")
 theme_override_fonts/bold_font = SubResource("SystemFont_f0jmt")
+theme_override_fonts/bold_italics_font = SubResource("SystemFont_uvohh")
+theme_override_fonts/italics_font = SubResource("SystemFont_7x6b3")
+theme_override_fonts/mono_font = SubResource("SystemFont_y78v3")
 text = "Date
 Week 1 Year 1 Day 23 Tuesday"
 selection_enabled = true
 
-[node name="Health" type="RichTextLabel" parent="VBoxContainer/GridContainer"]
+[node name="Health" type="RichTextLabel" parent="VBoxContainer/GridContainer" unique_id=1924041444]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 focus_mode = 2
 theme = SubResource("Theme_mfphk")
 theme_override_fonts/normal_font = SubResource("SystemFont_4g200")
-theme_override_fonts/mono_font = SubResource("SystemFont_y78v3")
-theme_override_fonts/italics_font = SubResource("SystemFont_7x6b3")
-theme_override_fonts/bold_italics_font = SubResource("SystemFont_uvohh")
 theme_override_fonts/bold_font = SubResource("SystemFont_f0jmt")
+theme_override_fonts/bold_italics_font = SubResource("SystemFont_uvohh")
+theme_override_fonts/italics_font = SubResource("SystemFont_7x6b3")
+theme_override_fonts/mono_font = SubResource("SystemFont_y78v3")
 text = "Health
 Creativity
 Happiness
 Alertness"
 selection_enabled = true
 
-[node name="Cash" type="RichTextLabel" parent="VBoxContainer/GridContainer"]
+[node name="Cash" type="RichTextLabel" parent="VBoxContainer/GridContainer" unique_id=74349842]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 focus_mode = 2
 theme = SubResource("Theme_mfphk")
 theme_override_fonts/normal_font = SubResource("SystemFont_4g200")
-theme_override_fonts/mono_font = SubResource("SystemFont_y78v3")
-theme_override_fonts/italics_font = SubResource("SystemFont_7x6b3")
-theme_override_fonts/bold_italics_font = SubResource("SystemFont_uvohh")
 theme_override_fonts/bold_font = SubResource("SystemFont_f0jmt")
+theme_override_fonts/bold_italics_font = SubResource("SystemFont_uvohh")
+theme_override_fonts/italics_font = SubResource("SystemFont_7x6b3")
+theme_override_fonts/mono_font = SubResource("SystemFont_y78v3")
 text = "Cash: 300"
 selection_enabled = true
 
-[node name="Addictions" type="RichTextLabel" parent="VBoxContainer/GridContainer"]
+[node name="Addictions" type="RichTextLabel" parent="VBoxContainer/GridContainer" unique_id=446042592]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 focus_mode = 2
 theme = SubResource("Theme_mfphk")
 theme_override_fonts/normal_font = SubResource("SystemFont_4g200")
-theme_override_fonts/mono_font = SubResource("SystemFont_y78v3")
-theme_override_fonts/italics_font = SubResource("SystemFont_7x6b3")
-theme_override_fonts/bold_italics_font = SubResource("SystemFont_uvohh")
 theme_override_fonts/bold_font = SubResource("SystemFont_f0jmt")
+theme_override_fonts/bold_italics_font = SubResource("SystemFont_uvohh")
+theme_override_fonts/italics_font = SubResource("SystemFont_7x6b3")
+theme_override_fonts/mono_font = SubResource("SystemFont_y78v3")
 text = "LSD
 Mary J
 H"
 selection_enabled = true
 
-[node name="Mid Labels" type="HBoxContainer" parent="VBoxContainer"]
+[node name="Mid Labels" type="HBoxContainer" parent="VBoxContainer" unique_id=1583059316]
 layout_mode = 2
 
-[node name="What\'s Going On" type="Label" parent="VBoxContainer/Mid Labels"]
+[node name="What\'s Going On" type="Label" parent="VBoxContainer/Mid Labels" unique_id=1696574041]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "What's Going On"
 
-[node name="Grapevine" type="Label" parent="VBoxContainer/Mid Labels"]
+[node name="Grapevine" type="Label" parent="VBoxContainer/Mid Labels" unique_id=267384648]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "Grapevine"
 
-[node name="Mid Display" type="HBoxContainer" parent="VBoxContainer"]
+[node name="Mid Display" type="HBoxContainer" parent="VBoxContainer" unique_id=1590087158]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="WhatsGoingOn" type="RichTextLabel" parent="VBoxContainer/Mid Display"]
+[node name="WhatsGoingOn" type="RichTextLabel" parent="VBoxContainer/Mid Display" unique_id=1904269853]
 layout_mode = 2
 text = "What is Going on?  
 
@@ -160,7 +167,7 @@ No really.
 
 What?"
 
-[node name="Grapevine" type="RichTextLabel" parent="VBoxContainer/Mid Display"]
+[node name="Grapevine" type="RichTextLabel" parent="VBoxContainer/Mid Display" unique_id=1473709786]
 layout_mode = 2
 text = "Grapevine
 "
